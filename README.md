@@ -6,21 +6,21 @@ a simple elixir enum cheatsheet
 - `all?`
     ```ex
     
-    [] |> Enum.all?()
+    [👋🏼,🤚🏼,🖐🏼,✋🏼,🖖🏼,👌🏼] |> Enum.all?( fn x -> x == 👌🏼 end)// false
 
     ```
 
 - `any?`
     ```ex
     
-    [] |> Enum.any?()
+   [👋🏼,🤚🏼,🖐🏼,✋🏼,🖖🏼,👌🏼] |> Enum.all?( fn x -> x == 👌🏼 end)// true
 
     ```
 
 - `at`
     ```ex
     
-    [] |> Enum.at()
+    [😀,😃,😄,😁,😆,😅] |> Enum.at(5)// 😅
 
     ```
 
@@ -28,14 +28,14 @@ a simple elixir enum cheatsheet
 - `chunk_by`
     ```ex
     
-    [] |> Enum.chunk_by()
+     [😀,😃,😁,😆,😅] |> Enum.chunk_by(fn x -> x == 😁)// [[😀,😃],[😁], [😆,😅]]
 
     ```
 
 - `chunk_every`
     ```ex
     
-    [] |> Enum.chunk_every()
+    [👏,🙌,👐,🤲,🤝] |> Enum.chunk_every(2)// [[👏,🙌],[👐,🤲],[🤝]]
 
     ```
 
