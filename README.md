@@ -6,21 +6,21 @@ a simple elixir enum cheatsheet
 - `all?`
     ```ex
     
-    [👋🏼,🤚🏼,🖐🏼,✋🏼,🖖🏼,👌🏼] |> Enum.all?( fn x -> x == 👌🏼 end)// false
+    [👋🏼 🤚🏼 🖐🏼 ✋🏼 🖖🏼 👌🏼] |> Enum.all?( fn x -> x == 👌🏼 end) ---> false
 
     ```
 
 - `any?`
     ```ex
     
-   [👋🏼,🤚🏼,🖐🏼,✋🏼,🖖🏼,👌🏼] |> Enum.all?( fn x -> x == 👌🏼 end)// true
+   [👋🏼 🤚🏼 🖐🏼 ✋🏼 🖖🏼 👌🏼] |> Enum.all?( fn x -> x == 👌🏼 end) ---> true
 
     ```
 
 - `at`
     ```ex
     
-    [😀,😃,😄,😁,😆,😅] |> Enum.at(5)// 😅
+    [😀 😃 😄 😁 😆 😅] |> Enum.at(5) ---> 😅
 
     ```
 
@@ -28,49 +28,35 @@ a simple elixir enum cheatsheet
 - `chunk_by`
     ```ex
     
-     [😀,😃,😁,😆,😅] |> Enum.chunk_by(fn x -> x == 😁)// [[😀,😃],[😁], [😆,😅]]
+     [😀 😃 😁 😆 😅] |> Enum.chunk_by(fn x -> x == 😁) ---> [[😀 😃] [😁]  [😆 😅]]
 
     ```
 
 - `chunk_every`
     ```ex
     
-    [👏,🙌,👐,🤲,🤝] |> Enum.chunk_every(2)// [[👏,🙌],[👐,🤲],[🤝]]
-
-    ```
-
-- `chunk_while`
-    ```ex
-    
-    [] |> Enum.chunk_while()
+    [👏 🙌 👐 🤲 🤝] |> Enum.chunk_every(2) ---> [[👏 🙌] [👐 🤲] [🤝]]
 
     ```
 
 - `concat`
     ```ex
     
-    [] |> Enum.concat()
+    [🐶 🐱 🐭] |> Enum.concat([🐹 🐰 🦊]) ---> [🐶 🐱 🐭 🐹 🐰 🦊]
 
     ```
 
 - `count`
     ```ex
     
-    [] |> Enum.count()
+    [🐶 🐱 🐭 🐹 🐰 🦊] |> Enum.count() ---> 6
 
     ```
 
-- `dedup`
+- `dedup` - remove consecutive duplicates
     ```ex
     
-    [] |> Enum.dedup()
-
-    ```
-
-- `dedup_by`
-    ```ex
-    
-    [] |> Enum.dedup_by()
+    [🐹 🐰 🦊 🦊 🐹 🐰] |> Enum.dedup() ---> [🐹 🐰 🦊 🐹 🐰]
 
     ```
 
