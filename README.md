@@ -24,7 +24,6 @@ a simple elixir enum cheatsheet
 
     ```
 
-
 - `chunk_by`
     ```ex
     
@@ -63,42 +62,44 @@ a simple elixir enum cheatsheet
 - `drop`
     ```ex
     
-    [] |> Enum.drop()
+    [👋🏼 🤚🏼 🖐🏼 🦊 🐹 🐰] |> Enum.drop(3) ---> [🦊 🐹 🐰]
 
     ```
 
 - `drop_every`
     ```ex
     
-    [] |> Enum.drop_every()
+    1..10 |> Enum.drop_every(2) ---> [2, 4, 6, 8, 10]
+    1..10 |> Enum.drop_every(1) ---> []
+    1..10 |> Enum.drop_every(0) ---> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     ```
 
 - `drop_while`
     ```ex
     
-    [] |> Enum.drop_while()
+    1..10 |> Enum.drop_while(fn x -> x < 5 end) ---> [6, 7, 8, 9, 10]
 
     ```
 
 - `each`
     ```ex
     
-    [] |> Enum.each()
+    1..2 |> Enum.each(fn x -> IO.puts(x) end) ---> 1 \n 2
 
     ```
 
 - `empty?`
     ```ex
     
-    [] |> Enum.empty?()
+    [] |> Enum.empty?() ---> true
 
     ```
 
 - `fetch`
     ```ex
     
-    [] |> Enum.fetch()
+    [👋🏼 🤚🏼 🖐🏼 🦊 🐹 🐰] |> Enum.fetch(3) ---> {:ok, 🦊}
 
     ```
 
@@ -112,21 +113,14 @@ a simple elixir enum cheatsheet
 - `find`
     ```ex
     
-    [] |> Enum.find()
+     [🐹 🐰 🦊 🦊 🐹 🐰] |> Enum.find(fn x -> x == 🦊 end) ---> 🦊
 
     ```
 
 - `find_index`
     ```ex
     
-    [] |> Enum.find_index()
-
-    ```
-
-- `find_value`
-    ```ex
-    
-    [] |> Enum.value()
+     [🐹 🐰 🦊 🦊 🐹 🐰] |> Enum.find(fn x -> x == 🦊 end) ---> 2
 
     ```
 
