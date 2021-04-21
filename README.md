@@ -106,7 +106,7 @@ a simple elixir enum cheatsheet
 - `filter`
     ```ex
     
-    [] |> Enum.filter()
+    1..10 |> Enum.filter(fn x -> rem(x, 2) == 0 end) --> [2, 4, 6, 8, 10]
 
     ```
 
@@ -127,28 +127,27 @@ a simple elixir enum cheatsheet
 - `flat_map`
     ```ex
     
-    [] |> Enum.map()
+    ["🐹", "🦊"] |> Enum.flat_map(fn x -> [x, x] end) ---> [["🐹", "🐹"], ["🦊", "🦊"]] 
 
     ```
 
-- `flat_map_reduce`
+<!-- - `flat_map_reduce`
     ```ex
     
     [] |> Enum.flat_map_reduce()
 
-    ```
+    ``` -->
 
 - `frequencies`
     ```ex
     
-    [] |> Enum.frequencies()
+    ["🐹", "🐰", "🦊", "🦊", "🐹"] |> Enum.frequencies() ---> %{"🐰" => 1, "🐹" => 2, "🦊" => 2}
 
     ```
 
 - `frequencies_by`
     ```ex
-    
-    [] |> Enum.frequencies_by()
+    ["🐹", "🐰", "🦊", "🦊", "🐹"] |> Enum.frequencies_by(fn x -> x == "🦊" end) ---> %{false: 3, true: 2}
 
     ```
 
