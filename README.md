@@ -13,7 +13,7 @@ a simple elixir enum cheatsheet
 - `any?`
     ```ex
     
-   [👋🏼 🤚🏼 🖐🏼 ✋🏼 🖖🏼 👌🏼] |> Enum.all?( fn x -> x == 👌🏼 end) ---> true
+   [👋🏼 🤚🏼 🖐🏼 ✋🏼 🖖🏼 👌🏼] |> Enum.any?( fn x -> x == 👌🏼 end) ---> true
 
     ```
 
