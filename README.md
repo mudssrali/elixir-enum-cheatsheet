@@ -179,8 +179,7 @@ a simple elixir enum cheatsheet
   ```
 
   ```ex
-   ["🐹", "🐰", "🦊", "🦊", "🐹"] |> Enum.group_by(fn x -> x end, fn x -> nameOf(x) end)
-   ---> %{"🐹" => ["bear","bear"], "🐰" => ["rabbit"], "🦊" => ["fox","fox"]}
+   ["🐹", "🐰", "🦊", "🦊", "🐹"] |> Enum.group_by(fn x -> x end, fn x -> name_of(x) end) ---> %{"🐹" => ["bear","bear"], "🐰" => ["rabbit"], "🦊" => ["fox","fox"]}
 
   ```
 
@@ -210,7 +209,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-   ["🐹", "🦊", "🦊", "🐹"] |> Enum.into([], fn x -> nameOf(x) end) --->  ["bear", "fox", "fox", "bear"]
+   ["🐹", "🦊", "🦊", "🐹"] |> Enum.into([], fn x -> name_of(x) end) --->  ["bear", "fox", "fox", "bear"]
 
   ```
 
@@ -275,7 +274,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  ["🐹", "🦊", "🦊", "🐰"] |> Enum.max_by(fn x -> nameOf(x) end) ---> "🐰"
+  ["🐹", "🦊", "🦊", "🐰"] |> Enum.max_by(fn x -> name_of(x) end) ---> "🐰"
 
   ```
 
@@ -302,7 +301,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  ["🐹", "🦊", "🦊", "🐰"] |> Enum.min_by(fn x -> nameOf(x) end) ---> "🐹"
+  ["🐹", "🦊", "🦊", "🐰"] |> Enum.min_by(fn x -> name_of(x) end) ---> "🐹"
 
   ```
 
@@ -318,7 +317,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  ["🐹", "🦊", "🦊", "🐰"] |> Enum.min_max_by(fn x -> nameOf(x) end) ---> {"🐹", "🐰"}
+  ["🐹", "🦊", "🦊", "🐰"] |> Enum.min_max_by(fn x -> name_of(x) end) ---> {"🐹", "🐰"}
 
   ```
 
