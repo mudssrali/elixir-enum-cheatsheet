@@ -325,7 +325,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.random()
+  ["🐹", "🦊", "🦊", "🐰"] |> Enum.random() ----> "🦊"
 
   ```
 
@@ -333,7 +333,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.reduce()
+  1..10 |> Enum.reduce(0, fn (x, agg) -> agg + x end) ----> 55 
 
   ```
 
@@ -357,7 +357,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.reverse()
+  ["🐹", "🦊", "🐰"] |> Enum.reverse() -----> ["🐰", "🦊","🐹"]
 
   ```
 
@@ -381,7 +381,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.shuffle()
+  ["🐹", "🦊", "🐰"] |> Enum.shuffle() ------> ["🐹", "🐰", "🦊"]
 
   ```
 
@@ -389,7 +389,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.slice()
+  ["🐹", "🦊", "🐰"] |> Enum.slice(1,2) -----> ["🦊", "🐰"]
 
   ```
 
@@ -397,7 +397,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.sort()
+  [45, 36, 78, 1, 4] |> Enum.sort() -------> [1, 4, 36, 45, 78]
 
   ```
 
@@ -413,7 +413,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.split()
+  ["🐹", "🦊", "🐰"] |> Enum.split(2) -----> {["🐹", "🦊"], ["🐰"]}
 
   ```
 
@@ -437,7 +437,15 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.sum()
+  [1, 2, 3, 4, 5] |> Enum.sum() -----> 15
+
+  ```
+
+  - `product`
+
+  ```ex
+
+  [1, 2, 3, 4, 5] |> Enum.product() -----> 120
 
   ```
 
@@ -485,7 +493,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.uniq()
+  ["🐹", "🦊", "🦊","🐰", "🐰"] |> Enum.uniq() -----> ["🐹", "🦊", "🐰"]
 
   ```
 
@@ -509,7 +517,7 @@ a simple elixir enum cheatsheet
 
   ```ex
 
-  [] |> Enum.with_index()
+  ["🐹", "🦊", "🐰"] |> Enum.with_index() -----> [{"🐹", 0}, {"🦊", 1}, {"🐰", 2}]
 
   ```
 
